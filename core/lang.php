@@ -20,11 +20,20 @@ function vp_load_localisation() {
     * Loads the language defined in settings.php
     * @return every translation as an array in the format: 
     */
+    
+    $localfile = file_get_contents("translations/" + VP_LOCALISATION + ".json");
+    $json_a = json_decode($string, true);
 }
+
+function vp_error($code) {
     
+}
+
+function vp_mysql_error($code) {
     
+}
+
+function vp_http_error($code) {
     
-    
-    
-    
+} 
 ?>
