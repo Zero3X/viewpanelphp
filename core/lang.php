@@ -15,25 +15,22 @@
  * @version    3.0.1
  */
 
-function vp_load_localisation() {
+function vp_load_localisation($force=null) {
     /**
     * Loads the language defined in settings.php
-    * @return every translation as an array in the format: 
+    * @return every translation as an array in the format: [ERR_TYPE][code][text] or [VP_LOC][Word]
     */
-    
-    $localfile = file_get_contents("translations/" + VP_LOCALISATION + ".json");
-    $json_a = json_decode($string, true);
-}
+    if ($force == null) {
+        $translationfile = CORE_DIR . "translations/" . VP_LOCALISATION . ".json";
+    } else {
+        $translationfile = CORE_DIR . "translations/" . $force . ".json";
+    }
+        $localfile = file_get_contents($translationfile);
 
-function vp_error($code) {
-    
+        if($localfile) {
+            return $jsonarray = json_decode($localfile, true);
+        } else {
+            return false;
+        }  
 }
-
-function vp_mysql_error($code) {
-    
-}
-
-function vp_http_error($code) {
-    
-} 
 ?>
