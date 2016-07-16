@@ -25,7 +25,7 @@
 			"text": "Error Code 102: This is not the code you're looking for"
 		},
 		"103": {
-			"text": "Code 103 Reserved"
+			"text": "Error Code 103: unknown error code responding to:"
 		},
 		"104": {
 			"text": "Code 104 Reserved"
@@ -93,7 +93,10 @@
 			"text": "Fatal Error 303: Loading engb localisation file failed."
 		},
         "304": {
-			"text": "Error 304: Debug options not set correctly. "
+			"text": "Error 304: Debug options not set correctly."
+		},
+        "305": {
+			"text": "Error 305: View Panel error handling sprung a leak. An error has not been handled correctly."
 		}
 	},
 

@@ -23,8 +23,4 @@ require_once("core/users.php");            //The user module comes next
 require_once("core/plugins.php");          //Load the plugins module about now
 require_once("core/navigation.php");       //Navigational functions
 require_once("core/theme.php");            //Load in themes
-
-
-
-vp_error(200);
 ?>

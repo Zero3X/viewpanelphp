@@ -23,7 +23,7 @@ function vp_mysql_connect() {
     
     //First: check we're set up to use MySQL and this hasn't been called by mistake. Also check to see if all the relevant information is in place.
     if (DB_BACKEND != "mysql") {
-        echo VP_ERR;
+        vp_error(100, "fatal");
     } else {
         //All is well, continue error checking.
         

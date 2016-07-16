@@ -23,7 +23,7 @@ define("DB_PASS", "password");
 define("DB_NAME", "tablename");
 
 //Language (localisation) option
-define("VP_LOCALISATION", "enu");
+define("VP_LOCALISATION", "engb");
 
 //THEME SETTINGS
 define("VP_THEME", "theme");
@@ -38,7 +38,9 @@ define("CORE_DIR", "core/");
 define("VP_SETTINGS_CHECK", true);
 define("VP_DEBUGGING", "ECHO"); //ECHO (To page), LOG (to .txt file), CONSOLE (to developer console) or OFF.
 define("VP_DEBUGGING_LEVEL", "ALL"); //ALL (Output everything), ERROR (Just errors)
-
+define("VP_DIE_ON_FATAL", true);
+define("VP_DIE_ON_ERROR", true);
+define("VP_DIE_ON_WARN", false);
 
 //Inbuilt error checking used to verify settings are correct
 if (VP_SETTINGS_CHECK == true) {
