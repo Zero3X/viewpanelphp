@@ -25,6 +25,19 @@ function vp_load_localisation($force=null) {
     } else {
         $translationfile = CORE_DIR . "translations/" . $force . ".json";
     }
+    
+    //Check the localisation file exists
+    if(!file_exists($translationfile)) {
+        //Oh dear, it appears loading the localisation file failed so we can't ouput the error in a local language. 
+        //In that case let's try and force loading engb 
+        if (!file_exists(CORE_DIR . "translations/engb.json")) {
+            //Forcing engb didn't work. Since we can't find a language we'll have to do our own bit of error handling and kill everything.
+            vp_error(303, "fatal", true);
+        }
+    }
+    
+    
+    
         $localfile = file_get_contents($translationfile);
 
         if($localfile) {
