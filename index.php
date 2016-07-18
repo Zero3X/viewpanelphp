@@ -26,4 +26,5 @@ require_once("core/theme.php");            //Load in themes
 
 
 vp_load_localisation();
+vp_mysql_connect();
 ?>

@@ -46,22 +46,25 @@
 			"text": "Code 109 Reserved"
 		},
 		"110": {
-			"text": "Fatal Error 110: Database username not set"
+			"text": "Fatal Error 110: Database credentials incorrect"
 		},
 		"111": {
-			"text": "Fatal Error 111: Database password not set"
+			"text": "Code 111 Reserved."
 		},
 		"112": {
-			"text": "Fatal Error 112: Database name not set"
+			"text": "Fatal Error 112: Database name does not exist"
 		},
 		"113": {
-			"text": "Fatal Error 113: Database location not set"
+			"text": "Fatal Error 113: Database location is incorrect"
 		},
 		"114": {
 			"text": "Fatal Error 114: Database provider not set"
 		},
 		"115": {
 			"text": "Fatal Error 115: Database provider does not exist"
+		},
+        "116": {
+			"text": "Fatal Error 116: Database username, password, name or location not set"
 		},
 
 		"200": {

@@ -22,13 +22,29 @@ function vp_mysql_connect() {
     */
     
     //First: check we're set up to use MySQL and this hasn't been called by mistake. Also check to see if all the relevant information is in place.
-    if (DB_BACKEND != "mysql") {
+    if (defined("DB_BACKEND") and DB_BACKEND != "mysql") {
         vp_error(100, "fatal");
+    } elseif (!defined("DB_BACKEND")) {
+        vp_error(114, "fatal");
     } else {
-        //All is well, continue error checking.
+        if(
+        !defined("DB_HOST") or 
+        !defined("DB_USER") or
+        !defined("DB_PASS") or
+        !defined("DB_NAME")
+            ) {
+                vp_error(116, "fatal");
+            } else {
+                //No errors. Make that connection!
+                $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         
+                if (!$connection) {
+                    vp_error(110, "fatal");
+                } else {
+                    return $connection;
+                }
+            }
     }
-    
 }
 
 function vp_mysql_query($query) {
