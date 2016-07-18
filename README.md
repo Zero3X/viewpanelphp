@@ -1,6 +1,6 @@
 # ViewPanelPHP 
 ## Information
-Welcome to the ViewPanelPHP Github repository, working alongside the BitBucket repository (https://bitbucket.org/Zero3X/viewpanelphp). This software falls under the GNU GENERAL PUBLIC LICENSE V3. Any third party libraries, images or fonts fall under their own licenses (which should be included).
+Welcome to the ViewPanelPHP Github repository. This software falls under the GNU GENERAL PUBLIC LICENSE V3. Any third party libraries, images or fonts fall under their own licenses (which should be included).
 
 ##### Version
 The current development version is 3.0.1 'Liberty'.
