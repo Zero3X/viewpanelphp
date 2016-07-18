@@ -18,9 +18,9 @@
 //DB SETTINGS
 define("DB_BACKEND", "mysql");
 define("DB_HOST", "localhost");
-define("DB_USER", "username");
-define("DB_PASS", "password");
-define("DB_NAME", "tablename");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "vp_php");
 
 //Language (localisation) option
 define("VP_LOCALISATION", "engb");
@@ -45,20 +45,21 @@ define("VP_DIE_ON_WARN", false);
 //Inbuilt error checking used to verify settings are correct
 if (VP_SETTINGS_CHECK == true) {
     if (
-        !defined("DB_BACKEND") and 
-        !defined("DB_HOST") and 
-        !defined("DB_USER") and
-        !defined("DB_PASS") and
-        !defined("DB_NAME") and
-        !defined("VP_LOCALISATION") and
-        !defined("VP_LOCALISATION") and
-        !defined("VP_THEME") and
-        !defined("VP_VERSION") and
-        !defined("VP_VERSION_FRIENDLY") and 
-        !defined("VP_DEBUGGING") and 
+        !defined("DB_BACKEND") or
+        !defined("DB_HOST") or
+        !defined("DB_USER") or
+        !defined("DB_PASS") or
+        !defined("DB_NAME") or
+        !defined("VP_LOCALISATION") or
+        !defined("VP_LOCALISATION") or
+        !defined("VP_THEME") or
+        !defined("VP_VERSION") or
+        !defined("VP_VERSION_FRIENDLY") or 
+        !defined("VP_DEBUGGING") or
         !defined("VP_DEBUGGING_LEVEL")
     ) {
         die("Fatal Error 300: Something isn't set correctly. Please check settings file.");
     }
 } 
+
 ?>

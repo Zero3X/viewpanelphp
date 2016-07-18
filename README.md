@@ -18,7 +18,13 @@ Reclaimed and rebooted in July 2016.
 
 ## Branch Organisation
 
-For now all changes are commited to the master branch. 
+Branches now follow standard GitFlow organisation.
+* The master branch contains the most up to date and stable release.
+* The develop branch contains the most active development. Development branches will eventually merge into release and may branch off from master. 
+* The release branch contains near stable code - possible release candiate versions even. Will eventually merge into master and then back into development.
+* The hotfix branch is for must-address issues that need to be fixed. Will merge back into master and into development. 
+
+For more information see [this](http://nvie.com/posts/a-successful-git-branching-model/).
 
 ##### Versioning Convention
 X.Y.Z 'NAME'
